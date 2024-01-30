@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Our Stories From The Field</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Our Stories From The Fields</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+    <br>
+<div class="container">
+    {% for st in story %}
+    <div class="row">
+        <div id="circle-shape-example">
+            <p style="font-weight: bold;">{{st.name}}</p>
+            <img src="/media/{{st.image}}" class="curve" width="30%">          
+            <p>{{st.description}}</p>
+          </div>
+    </div>
+    <hr>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

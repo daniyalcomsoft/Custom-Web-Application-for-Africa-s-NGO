@@ -1,0 +1,157 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Covid-19</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Covid-19</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #dc9027;">
+                {% for c1 in cd1 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{c1.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{c1.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+
+            <!-- services section -->
+            <div class="service-section py-5">
+                <div class="container py-md-5 py-4">
+                    <div class="row align-items-center mb-5">
+                        <div class="col-md-12 section-heading">
+                            <h5 class="small-title-2"></h5>
+                            <h3 class="title-style-2">
+                                Responding Together</h3>
+                        </div>                        
+                    </div>
+                    <div class="row justify-content-center">
+                        {% for c2 in cd2 %}
+                        <div class="col-lg-4 col-md-6 item" style="padding: 5px;">
+                            
+                            <div class="card">
+                                
+                                <div class="card-header p-0 position-relative border-0">
+                                    <a href="">
+                                        <img class="d-block img-responsive" src="/media/{{c2.image}}" alt="card-image">
+                                    </a>
+                                </div>
+                                <div class="card-body service-details">
+                                    <p style="float: left; color: red;">{{c2.heading}}</p>
+                                    <br>                                                                      
+                                    <p style="float: left;">{{c2.description}}</p>
+                                </div>
+                               
+                            </div>
+                           
+                        </div>                       
+                        {% endfor %}                        
+                        
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <!-- //services section -->
+
+
+
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #2d6484;">
+                {% for c3 in cd3 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{c3.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{c3.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #dc9027;">
+                {% for c4 in cd4 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{c4.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{c4.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+
+
+        <!-- services section -->
+        <div class="service-section py-5">
+            <div class="container py-md-5 py-4">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-12 section-heading">
+                        <h5 class="small-title-2"></h5>
+                        <h3 class="title-style-2">
+                            Read More About Our Response</h3>
+                    </div>                        
+                </div>
+                <div class="row justify-content-center">
+                    {% for c5 in cd5 %}
+                    <div class="col-lg-6 col-md-6 item" style="padding: 5px;">
+                        
+                        <div class="card">
+                            
+                            <div class="card-header p-0 position-relative border-0">
+                                <a href="">
+                                    <img class="d-block img-responsive" src="/media/{{c5.image}}" alt="card-image">
+                                </a>
+                            </div>
+                            <div class="card-body service-details">
+                                <p style="float: left; color: red;">{{c5.heading}}</p>
+                                <br>                                                                      
+                                <p style="float: left;">{{c5.description}}</p>
+                            </div>
+                           
+                        </div>
+                       
+                    </div>                       
+                    {% endfor %}                        
+                    
+                </div>
+                <br>
+            </div>
+        </div>
+        <!-- //services section -->
+
+{% endblock %}

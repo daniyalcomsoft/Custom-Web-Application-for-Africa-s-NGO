@@ -1,0 +1,149 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+
+ <!-- inner banner -->
+ <section class="inner-banner">
+    <div class="w3l-breadcrumb py-5">
+        <div class="container py-xl-5 py-md-4 mt-5">
+            <h4 class="inner-text-title font-weight-bold mb-sm-2">Give Water</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/">Home</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Donate Water</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //inner banner -->
+
+
+<div class="container-fluid">
+    <div class="row">
+        
+        <div class="col-md-6 col-lg-5 col-sm-6 col-xs-6 mx-auto my-5 p-5 text-center" style="box-shadow: 0px 0px 10px gray;">
+            <h1 class="text-warning" style="padding: 10px; padding-bottom: 10px;">Click Here To Donate</h1>
+            <!-- {{form.render}} -->          
+            <div id="paypal-button-container"></div>                      
+        </div>
+        {% for p in pp%}
+        <div class="col-md-6 col-lg-7 col-sm-6 col-xs-6 mx-auto my-5 p-5 text-center" style="box-shadow: 0px 0px 10px gray;">
+            <h1 class="text-warning" style="padding: 10px; padding-bottom: 10px; line-height: 1.5em;">{{p.heading}}</h1>
+              <p style="padding: 10px; padding-bottom: 10px;">
+                {{p.description}}
+             </p>              
+        </div>
+        {% endfor %}
+       
+    
+    </div>
+</div>
+
+  <!--First Heading-->
+  <section class="w3l-aboutblock ">
+    <div class="container-fluid">
+        <div class="row dd">
+            {% for df in dfh %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{df.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <p>{{df.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+<!--First Heading End-->
+
+ <!-- Second Heading -->
+ <section class="w3l-aboutblock py-5">
+    <div class="container py-md-5 py-sm-4">
+        <div class="row">
+            {% for ds in dsh %}
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                <img class="img-fluid img-responsive" src="/media/{{ds.image}}" alt=" ">
+            </div>
+            <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                <h3 class="title-style">{{ds.heading}}</h3>
+                <p class="mt-2">{{ds.description}}</p>  
+                <a href="/process_payment" style="background: #dc9027; color: white; margin-top: 10px;" class="btn btn-warning btn-lg">Give Monthly</a>              
+            </div>
+            {% endfor %}
+        </div>               
+    </div>
+</section>
+<!-- //Second Heading End -->
+
+<!-- Donors section -->
+<section class="w3l-clients py-5" id="testimonials">
+    <div class="container py-md-5 py-4">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 section-heading">
+                <h5 class="small-title-2">Our Donors</h5>
+                <h3 class="title-style-2">What Our Donors Say</h3>
+            </div>
+            <div class="col-md-6 section-heading mt-md-0 mt-2">
+                <!-- <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque,
+                    eaque ipsa quae ab illo inventore.Sed ut perspiciatis unde omnis iste natus error sit.
+                </p> -->
+            </div>
+        </div>        
+       
+        <div id="owl-demo2" class="owl-carousel owl-theme pb-5">
+            {% for dt in dth %}
+            <div class="item">
+                
+                <div class="testimonial-content">
+                    <div class="testimonial">
+                        <blockquote>
+                            <!-- <q>Pellen tesque libero ut justo</q> -->
+                        </blockquote>
+                        <p>{{dt.description}}</p>
+                    </div>
+                    <div class="bottom-info mt-4">
+                        <a class="comment-img" href="#url"><img src="/media/{{dt.image}}"
+                                class="img-responsive" alt="placeholder image"></a>
+                        <div class="people-info align-self">
+                            <h3>{{dt.name}}</h3>
+                            <!-- <p class="identity">Example City</p> -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>        
+            {% endfor %}    
+        </div>
+        
+    </div>
+</section>
+<!-- //Donors section End -->
+
+
+<!--Full Imaage With Hover-->
+
+    <div class="col-md-12 col-sm-12 col-lg-12">
+    {% for db in dbi %}
+    <div class="row">
+    <img src="/media/{{db.image}}" class="img-responsive img-fluid" alt="" width="100%"> 
+    </div>  
+    {% endfor %}
+    </div>
+
+
+<!--End Full Image With Hover-->
+
+
+
+{% endblock %}
+

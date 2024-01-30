@@ -1,0 +1,112 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+
+ <!-- inner banner -->
+ <section class="inner-banner">
+    <div class="w3l-breadcrumb py-5">
+        <div class="container py-xl-5 py-md-4 mt-5">
+            <h4 class="inner-text-title font-weight-bold mb-sm-2">Blogs Section</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/">Home</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Blogs Section</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //inner banner -->
+<br>
+
+<!-- blog category -->
+<section class="w3l-clients py-5" id="testimonials">
+    <div class="container py-md-5 py-4">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-12 section-heading">
+                <h5 class="small-title-2">Our Blogs</h5>
+                <h3 class="title-style-2">Blog Categories (Problem Wise) </h3>
+            </div>            
+        </div>        
+       
+        <div id="owl-demo2" class="owl-carousel owl-theme pb-5">
+            {% for cat in cats %}
+            <div class="item">
+                
+                <div class="testimonial-content">
+                    <div class="testimonial">
+                        <blockquote>
+                            <!-- <q>Pellen tesque libero ut justo</q> -->
+                        </blockquote>
+                        <p>{{cat.description}}</p>
+                    </div>
+                    <div class="bottom-info mt-4">
+                        <a class="comment-img" href="#url"><img src="/media/{{cat.image}}"
+                                class="img-responsive" alt="placeholder image"></a>
+                        <div class="people-info align-self">
+                            <h3>{{cat.title}}</h3>
+                            <p class="identity"><a href="/category/{{cat.url}}">Read More</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>        
+            {% endfor %}    
+        </div>
+        
+    </div>
+</section>
+<!-- // blog category  -->
+
+       
+<!-- blog section -->
+<div class="w3l-homeblock2 py-5">
+    <div class="container py-md-5 py-4">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-12 section-heading">
+                <h5 class="small-title-2">Our News & Articles</h5>
+                <h3 class="title-style-2"></h3>
+            </div>           
+        </div>
+        <div class="row">
+            {% for p in posts %}
+            <div class="col-lg-6">
+                <div class="bg-clr-white hover-box">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 position-relative">
+                            <a href="#blog">
+                                <img class="img-fluid d-block" src="/media/{{p.image}}" alt="image">
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card-body blog-details align-self pl-sm-0">
+                                <a href="#blog" class="blog-desc">
+                                </a>
+                                <p>{{p.title}}</p>
+                                <div class="d-flex align-items-center justify-content-between mt-lg-4 mt-5">
+                                    <h5 class="text-blog-e">March 06, 2021</h5>
+                                    <a href="/blog/{{p.url}}" class="blog-icon-e"><i class="fas fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- //blog section -->
+
+    
+       
+
+{% endblock %}

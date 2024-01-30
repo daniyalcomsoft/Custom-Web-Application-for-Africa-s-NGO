@@ -1,0 +1,53 @@
+
+
+
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Our Gallery</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Our Gallery</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+
+
+  <!-- Insert Stacks Begin -->
+  <section class="three-column-images">
+  <div class="container " >
+
+    <div class="row">
+        {% for o in ou %}
+      <div class="col-xs-6 col-sm-4" >
+        <img src="/media/{{o.image}}" class="img-thumbnail img-responsive">              
+      </div> 
+      {% endfor %}  
+    </div> 
+    <!-- Row -->
+    
+    
+  </div> 
+   <!-- Container --> 
+  </section>
+ 
+
+  {% endblock %}

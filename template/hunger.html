@@ -1,0 +1,95 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Water And Hunger</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Water And Hunger</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+<section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #2d6484;">
+            {% for h1 in hun1 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{h1.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{h1.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+<section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #dc9027;">
+            {% for h2 in hun2 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{h2.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{h2.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+
+<section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #2d6484;">
+            {% for h3 in hun3 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{h3.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{h3.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+<section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #dc9027;">
+            {% for h4 in hun4 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{h4.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{h4.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+
+    {% endblock %}

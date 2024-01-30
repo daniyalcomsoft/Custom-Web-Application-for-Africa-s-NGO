@@ -1,0 +1,137 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Water Scarcity</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Water Scarcity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+
+    <div class="container">
+        <div class="row">
+           
+            {% for s1 in ss1 %}
+            <div class="col-sm-12 col-lg-12 col-md-12">
+                <h3 class="mt-2 mb-2" style="padding-top:20px;">{{s1.heading}}</h3>
+            </div>
+            <div class="col-sm-12 col-lg-12 col-md-12" style="padding: 10px;">
+            <h3 class="mt-2 mb-2"></h3>
+            <video width="450" height="400" controls>
+                <source src="{{s1.video.url}}" type="video/mp4">
+            </video>
+            </div>
+            <div class="col-sm-12 col-lg-12 col-md-12" style="padding: 10px;">
+                <p class="mt-2 mb-2">
+                    {{s1.description}}
+                </p>
+                
+                </div>
+            {% endfor %}
+        
+        </div>
+        </div>
+
+
+
+        
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #dc9027;">
+                {% for s2 in ss2 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{s2.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{s2.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+    
+
+    <!-- 2 Equal columns -->
+<div class="container-fluid">
+    {% for s3 in ss3 %}
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 20px;">
+          <div class="text-center">
+            <h1>{{s3.heading}}</h1>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+            {{s3.description1}}  
+          </P>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+             {{s3.description2}}
+         </P>
+        </div>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--2 equal columns End -->
+
+
+  <section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #dc9027;">
+            {% for s4 in ss4 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{s4.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{s4.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+{%block title %}
+Welcome to IBLOGS
+
+{% endblock %}
+
+
+{% block content %}
+
+ <!-- inner banner -->
+ <section class="inner-banner">
+    <div class="w3l-breadcrumb py-5">
+        <div class="container py-xl-5 py-md-4 mt-5">
+            <h4 class="inner-text-title font-weight-bold mb-sm-2">Blogs Section</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/">Home</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Blogs Section</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //inner banner -->
+<br>
+
+
+<section>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img src="/media/{{cat.image}}" class="responsive-img" style="max-height: 500px;width: 100%; object-fit: cover;" alt="">
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row" style="padding: 20px;">
+        {% for p in posts %}
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            <ul>
+                <li><a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a></li>
+            </ul>            
+        {% empty %}
+
+        <h3>No post in this category</h3>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+
+{% endblock %}
+

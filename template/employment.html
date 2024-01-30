@@ -1,0 +1,91 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Work With Us</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Work With Us</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+          
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #dc9027;">
+                {% for e1 in em1 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{e1.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{e1.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+    
+
+   
+
+
+
+
+    <div class="container">
+        <div class="row">
+           
+            {% for e2 in em2 %}
+            <div class="col-sm-12 col-lg-12 col-md-12">
+                <h3 class="mt-2 mb-2" style="padding-top:20px;">{{e2.heading}}</h3>
+            </div>
+            <div class="col-sm-12 col-lg-12 col-md-12" style="padding: 10px;">
+            <h3 class="mt-2 mb-2"></h3>
+            <video width="450" height="400" controls>
+                <source src="{{e2.video.url}}" type="video/mp4">
+            </video>
+            </div>
+            <div class="col-sm-12 col-lg-12 col-md-12" style="padding: 10px;">
+                <p class="mt-2 mb-2">
+                    {{e2.description}}
+                </p>
+                
+                </div>
+            {% endfor %}
+        
+        </div>
+        </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

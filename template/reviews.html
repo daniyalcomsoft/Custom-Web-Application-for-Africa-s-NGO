@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Read Reviews</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Read Reviews</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+          
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #dc9027;">
+                {% for r1 in rr1 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1 style="line-height: 1em;">{{r1.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{r1.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+    <div class="container">
+        {% for r2 in rr2 %}
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <img src="/media/{{r2.image}}" class="img-responsive img-thumbnail img-fluid" style="width: 150px; height: 150px; border-radius: 50%; margin-top: 20px;" alt="">
+            </div>        
+            <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center; margin: 10px;" >
+                <p style="font-weight: bold;">{{r2.heading}}</p>
+                <p>{{r2.description}}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <hr>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

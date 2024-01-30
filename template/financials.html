@@ -1,0 +1,104 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<div>
+
+ <!-- inner banner -->
+ <section class="inner-banner">
+    <div class="w3l-breadcrumb py-5">
+        <div class="container py-xl-5 py-md-4 mt-5">
+            <h4 class="inner-text-title font-weight-bold mb-sm-2">Our Annual Report</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/">Home</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Our Annual Report</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //inner banner -->
+
+<!--top Heading-->
+<section class="w3l-aboutblock ">
+  <div class="container-fluid ">
+      <div class="row dd">
+          {% for f1 in fh1 %}
+          <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+              <img src="/media/{{f1.image}}" alt="" width="300px" height="300px">
+          </div>
+          <div class="col-md-12 col-sm-12 col-lg-12">
+              <p>{{f1.description}}</p>
+          </div>
+          {% endfor %}
+      </div>        
+  </div>
+</section>
+<!--top Heading End-->
+
+  <div class="container-fluid">
+    {% for f2 in fh2 %}
+    <div class="row">      
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="boxx">
+          <img src="/media/{{f2.image}}" width="90%" alt="">
+        </div>
+      </div>            
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="boxx"  style="background: #dc9027;">
+          <p style="color: whitesmoke;">
+            {{f2.description}}
+          </p>
+        </div>
+      </div>      
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--real problem -------------------------------Fourth Heading-->
+  <section class="w3l-aboutblock">
+    <div class="container-fluid ">
+        <div class="row dd">
+            {% for f3 in fh3 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{f3.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <p>{{f3.reportdescription}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+<!--Fpurth Heading End-->
+
+
+  <!--real problem -------------------------------Fourth Heading-->
+  <section class="w3l-aboutblock">
+    <div class="container-fluid">
+        <div class="row dd" style="background: #dc9027;">
+            {% for f4 in fh4 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                <img src="/media/{{f4.image}}" class="responsive-img" height="250px" width="300" alt="">                
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <p>{{f4.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+<!--Fpurth Heading End-->
+
+</div>
+
+{% endblock %}

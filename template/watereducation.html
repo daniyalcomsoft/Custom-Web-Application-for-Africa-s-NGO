@@ -1,0 +1,82 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Water And Education</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Water And Education</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+    <br>
+<div class="container">
+    {% for w1 in we1 %}
+    <div class="row">
+        <div id="circle-shape-example">
+            <p style="font-weight: bold;">{{w1.heading}}</p>
+            <img src="/media/{{w1.image}}" class="curve" width="30%">          
+            <p>{{w1.description}}</p>
+          </div>
+    </div>
+    <hr>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+<section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #2d6484;">
+            {% for w2 in we2 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{w2.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{w2.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+<section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #dc9027;">
+            {% for w3 in we3 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{w3.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{w3.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+
+
+
+    {% endblock %}

@@ -1,0 +1,101 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Make A Donation</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Make A Donation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-6 col-lg-5 col-sm-6 col-xs-6 mx-auto my-5 p-5 text-center" style="box-shadow: 0px 0px 10px gray;">
+                <h1 class="text-warning" style="padding: 10px; padding-bottom: 10px;">Click Here To Donate</h1>
+                <!-- {{form.render}} -->          
+                <div id="paypal-button-container"></div>                      
+            </div>
+            {% for p in pp%}
+            <div class="col-md-6 col-lg-7 col-sm-6 col-xs-6 mx-auto my-5 p-5 text-center" style="box-shadow: 0px 0px 10px gray;">
+                <h1 class="text-warning" style="padding: 10px; padding-bottom: 10px; line-height: 1.5em;">{{p.heading}}</h1>
+                  <p style="padding: 10px; padding-bottom: 10px;">
+                    {{p.description}}
+                 </p>              
+            </div>
+            {% endfor %}
+           
+        
+        </div>
+    </div>
+
+
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #dc9027;">
+                {% for m1 in md1 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{m1.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{m1.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+    <!-- banner bottom section -->
+    <section class="w3l-aboutblock py-5">
+        <div class="container py-md-5 py-sm-4">
+            <div class="row">
+                {% for m2 in md2 %}
+                <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                    <img class="img-fluid img-responsive" src="/media/{{m2.image}}" alt=" ">
+                </div>
+                <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                    <h3 class="title-style">{{m2.heading}}</h3>
+                    <p class="mt-2">{{m2.description}}</p>
+                   
+                </div>
+                {% endfor %}
+            </div>                                   
+        </div>
+    </section>
+    <!-- //banner bottom section -->
+
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #2d6484;">
+                {% for m3 in md3 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{m3.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{m3.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+{% endblock %}

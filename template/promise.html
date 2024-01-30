@@ -1,0 +1,162 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- inner banner -->
+<section class="inner-banner">
+    <div class="w3l-breadcrumb py-5">
+        <div class="container py-xl-5 py-md-4 mt-5">
+            <h4 class="inner-text-title font-weight-bold mb-sm-2">Water Promise</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/">Home</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Water Promise</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //inner banner -->
+
+  <!--Fourth Heading-->
+  <section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #dc9027;">
+            {% for w1 in wp1 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{w1.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{w1.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+<!--Fpurth Heading End-->
+
+<!-- banner bottom section -->
+<section class="w3l-aboutblock py-5">
+    <div class="container py-md-5 py-sm-4">
+        <div class="row">
+            {% for w2 in wp2 %}
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                <img class="img-fluid img-responsive" src="/media/{{w2.image}}" alt=" ">
+            </div>
+            <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                <h3 class="title-style">{{w2.heading}}</h3>
+                <p class="mt-2">{{w2.description}}</p>                
+            </div>
+            {% endfor %}
+        </div>         
+    </div>
+</section>
+<!-- //banner bottom section -->
+
+
+
+
+<div class="half-half-image-text">
+    <div class="container">      
+      <div class="row">
+          {% for w3 in wp3 %}
+        <div class="col-12 col-lg-6" style="padding-top: 50px; vertical-align: bottom;">
+          <div class="content" style="padding: 15px;">
+            <h3>{{w3.heading}}</h3>
+            <br>
+            <p>{{w3.description}}</p>
+            
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="img" style="padding: 20px;">
+            <img src="/media/{{w3.image}}" class="img-responsive" height="400px" alt="">
+        </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+
+
+
+<!-- banner bottom section -->
+<section class="w3l-aboutblock py-5">
+    <div class="container py-md-5 py-sm-4">
+        <div class="row">
+            {% for w4 in wp4 %}
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                <img class="img-fluid img-responsive" src="/media/{{w4.image}}" alt="" >
+            </div>
+            <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                <h3 class="title-style">{{w4.heading}}</h3>
+                <p class="mt-2">{{w4.description}}</p>                
+            </div>
+            {% endfor %}
+        </div>         
+    </div>
+</section>
+<!-- //banner bottom section -->
+
+
+
+
+<div class="half-half-image-text">
+    <div class="container">      
+      <div class="row">
+          {% for w5 in wp5 %}
+        <div class="col-12 col-lg-6" style="padding-top: 50px; vertical-align: bottom;">
+          <div class="content" style="padding: 15px;">
+            <h3>{{w5.heading}}</h3>
+            <br>
+            <p>{{w5.description}}</p>
+            
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="img" style="padding: 20px;">
+            <img src="/media/{{w5.image}}" class="img-responsive" height="400px" alt="">
+        </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+
+
+
+  <!--Fourth Heading-->
+  <section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #2d6484;">
+            {% for w6 in wp6 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{w6.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{w6.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+<!--Fpurth Heading End-->
+
+
+
+
+
+
+
+
+{% endblock %}

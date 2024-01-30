@@ -1,0 +1,164 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Who We Are</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Who We Are</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+    <br>
+<!--Full Imaage With Hover-->
+<div class="col-md-12 col-sm-12 col-lg-12">
+  <div class="row">
+    {% for a1 in ab1 %}
+    <img src="/media/{{a1.image}}" class="img-fluid img-responsive" alt="" width="100%">    
+    {% endfor %}
+  </div>
+</div>
+<!--End Full Image With Hover-->
+<br>
+<!--house of green ----------------------top Heading-->
+<section class="w3l-aboutblock ">
+    <div class="container-fluid ">
+        <div class="row dd">
+            {% for a2 in ab2 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                <img src="/media/{{a2.logo}}" class="responsive-img" alt="">
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <p>{{a2.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+<!--top Heading End-->
+  <!--real problem -------------------------------Fourth Heading-->
+  <section class="w3l-aboutblock ">
+    <div class="container-fluid ">
+        <div class="row dd" style="background: #dc9027; color: whitesmoke;">
+            {% for a3 in ab3 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{a3.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12">
+                <p>{{a3.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+<!--Fpurth Heading End-->
+<br>
+ <!------------------------------------------Full Imaage With Hover-->
+ <div class="col-md-12 col-sm-12 col-lg-12">     
+    {% for a4 in ab4 %}    
+    <img src="/media/{{a4.image}}" class="img-fluid img-responsive" alt="Snow" width="100%">    
+    {% endfor %}
+</div>
+<!--End Full Image With Hover-->
+
+<!-- 2 Equal columns -->
+<div class="container-fluid">
+    {% for a5 in ab5 %}
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 20px;">
+          <div class="text-center">
+            <h1>{{a5.heading}}</h1>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+            {{a5.description1}}  
+          </P>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+             {{a5.description2}}
+         </P>
+        </div>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--2 equal columns End -->
+<!-- ------------------------supporter image -->
+<div class="container">
+    {% for su in supp%}
+    <div class="row">
+        <div id="circle-shape-example">
+            <img src="/media/{{su.supporterimage}}" class="curve" width="30%">          
+            <p>{{su.description}}</p>
+          </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- 2 Equal columns -->
+<div class="container-fluid">
+    {% for a6 in ab6 %}
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="">
+            <h1 style="text-align: center; padding: 20px;">{{a6.heading}}</h1>
+          </div>
+        </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+            {{a6.description1}}  
+          </P>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+             {{a6.description2}}
+         </P>
+        </div>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--2 equal columns End -->
+
+
+ <!------------------------------------------Full Imaage With Hover-->
+ <div class="col-md-12 col-lg-12 col-sm-12">
+    {% for a7 in ab7 %}
+    <img src="/media/{{a7.image}}" class="img-fluid img-responsive" alt="Snow" width="100%">    
+    {% endfor %}
+</div>
+<!--End Full Image With Hover-->
+
+
+    
+    {% endblock %}

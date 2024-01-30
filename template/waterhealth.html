@@ -1,0 +1,161 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">Water And Health</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Water And Health</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+
+    
+<!-- 2 Equal columns -->
+<div class="container-fluid">
+    {% for w1 in wh1 %}
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 20px;">
+          <div class="text-center">
+            <h1>{{w1.heading}}</h1>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+            {{w1.description1}}  
+          </P>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+             {{w1.description2}}
+         </P>
+        </div>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--2 equal columns End -->
+
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #dc9027;">
+                {% for w2 in wh2 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{w2.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{w2.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+
+    
+ <!-- banner bottom section -->
+ <section class="w3l-aboutblock py-5">
+    <div class="container py-md-5 py-sm-4">
+        <div class="row">
+            {% for w3 in wh3 %}
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                <img class="img-fluid img-responsive" src="/media/{{w3.image}}" alt=" ">
+            </div>
+            <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                <h3 class="title-style">{{w3.heading}}</h3>
+                <p class="mt-2">{{w3.description}}</p>                
+            </div>
+            {% endfor %}
+        </div>               
+    </div>
+</section>
+<!-- //banner bottom section -->
+          
+<!-- 2 Equal columns -->
+<div class="container-fluid">
+    {% for w4 in wh4 %}
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 20px;">
+          <div class="text-center">
+            <h1>{{w4.heading}}</h1>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+            {{w4.description1}}  
+          </P>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+             {{w4.description2}}
+         </P>
+        </div>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--2 equal columns End -->
+
+  <section class="w3l-aboutblock" >
+    <div class="container-fluid">
+        <div class="row dd" style="background: #dc9027;">
+            {% for w5 in wh5 %}
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                <h1>{{w5.heading}}</h1>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                <p>{{w5.description}}</p>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+</section>
+
+
+    <section class="w3l-aboutblock" >
+        <div class="container-fluid">
+            <div class="row dd" style="background: #2d6484;">
+                {% for w6 in wh6 %}
+                <div class="col-md-12 col-sm-12 col-lg-12 text-center" style="padding: 20px;">
+                    <!-- <img src="/media/{{if.image}}" class="responsive-img" alt=""> -->
+                    <h1>{{w6.heading}}</h1>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="padding: 20px;">
+                    <p>{{w6.description}}</p>
+                </div>
+                {% endfor %}
+            </div>        
+        </div>
+    </section>
+
+
+{% endblock %}

@@ -1,0 +1,189 @@
+
+{% extends 'base.html' %}
+
+
+{%block title %}
+House of Greens
+
+{% endblock %}
+
+
+
+{% block content %}
+   
+
+    <!-- inner banner -->
+    <section class="inner-banner">
+        <div class="w3l-breadcrumb py-5">
+            <div class="container py-xl-5 py-md-4 mt-5">
+                <h4 class="inner-text-title font-weight-bold mb-sm-2">YOU CAN HELP SOLVE THE WATER CRISIS</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>YOU CAN HELP SOLVE THE WATER CRISIS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //inner banner -->
+      <!--section-->
+  <div style="padding: 20px; background-color: #dc9027;">	
+	<div class="container">
+        {% for s1 in sc1 %}
+        <div class="row">            		
+            <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">
+                <h2 style="color: white;">{{s1.heading}}</h2>                
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">            
+                <p style="color: white; font-size: 1em; padding: 20px;"> 
+                    {{s1.description}}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+<!--endsection-->
+ <!--section-->
+ <div style="padding: 20px; background-color: #2d6484;">	
+	<div class="container">
+        {% for s2 in sc2 %}
+        <div class="row">            		
+            <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">
+                <h2 style="color: white;">{{s2.heading}}</h2>                
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">            
+                <p style="color: white; font-size: 1em; padding: 20px;"> 
+                    {{s2.description}}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+<!--endsection-->
+
+
+ <!-- banner bottom section -->
+ <section class="w3l-aboutblock py-5">
+    <div class="container py-md-5 py-sm-4">
+        <div class="row">
+            {% for s3 in sc3 %}
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                <img class="img-fluid img-responsive" src="/media/{{s3.image}}" alt=" ">
+            </div>
+            <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                <h3 class="title-style">{{s3.heading}}</h3>
+                <p class="mt-2">{{s3.description}}</p>                
+            </div>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row">
+            {% for s4 in sc4 %}
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                <img class="img-fluid img-responsive" src="/media/{{s4.image}}" alt=" ">
+            </div>
+            <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                <h3 class="title-style">{{s4.heading}}</h3>
+                <p class="mt-2">{{s4.description}}</p>                    
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</section>
+<!-- //banner bottom section -->
+
+    <!--section-->
+    <div style="padding: 20px; background-color: #dc9027;">	
+        <div class="container">
+            {% for s5 in sc5 %}
+            <div class="row">            		
+                <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">
+                    <h2 style="color: white;">{{s5.heading}}</h2>                
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">            
+                    <p style="color: white; font-size: 1em; padding: 20px;"> 
+                        {{s5.description}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    <!--endsection-->
+
+
+    
+ <!-- banner bottom section -->
+ <section class="w3l-aboutblock py-5">
+    <div class="container py-md-5 py-sm-4">
+        <div class="row">
+            {% for s6 in sc6 %}
+            <div class="col-lg-6 left-wthree-img mb-lg-0 mb-4">
+                <img class="img-fluid img-responsive" src="/media/{{s6.image}}" alt=" ">
+            </div>
+            <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                <h3 class="title-style">{{s6.heading}}</h3>
+                <p class="mt-2">{{s6.description}}</p>                
+            </div>
+            {% endfor %}
+        </div>
+        <hr>
+        
+    </div>
+</section>
+<!-- //banner bottom section -->
+
+
+<!-- 2 Equal columns -->
+<div class="container-fluid">
+    {% for s7 in sc7 %}
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 20px;">
+          <div class="text-center">
+            <h1>{{s7.heading}}</h1>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+            {{s7.description1}}  
+          </P>
+        </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6">
+        <div class="box">
+          <p>
+             {{s7.description2}}
+         </P>
+        </div>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+  
+  <!--2 equal columns End -->
+
+
+      <!--section-->
+      <div style="padding: 20px; background-color: #dc9027;">	
+        <div class="container">
+            {% for s8 in sc8 %}
+            <div class="row">            		
+                <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">
+                    <h2 style="color: white;">{{s8.heading}}</h2>                
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-12" style="text-align: center;">            
+                    <p style="color: white; font-size: 1em; padding: 20px;"> 
+                        {{s8.description}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    <!--endsection-->
+{% endblock %}
